@@ -2,6 +2,17 @@
 
 Status: exploratory research design, 2026-11-19. No estimator has yet been validated.
 
+## Primary organizing concept: PARETO FRONTIER
+
+**Pareto Frontier is the project's most important keyword, declared by the project owner on 2026-11-19.** It is the criterion for scientific positioning, algorithm selection, simulation design, comparative figures, and eventual paper claims.
+
+- Preserve HAS's identity as a sensitivity-first principle and its ability to detect genuine rare high-amplitude PAC.
+- At a properly calibrated nominal statistical Type I error, evaluate sensitivity (true sparse PAC detection) against resilience to physiological/artifactual false-positive interpretations (e.g., EMG, sharp edges, single nonsinusoidal oscillators). These are different error notions.
+- Construct scenario-conditional non-dominated sets including published methods, original HAS, and candidate HAS descendants. Do not claim a universal frontier without evidence.
+- An optimal method for this project may intentionally occupy the *high-sensitivity end* of a frontier; maximum robustness is not a requirement.
+- Do not quietly substitute a single aggregate benchmark, AUC, or scalar robustness score for Pareto analysis; report underlying paired coordinates with uncertainty and study their stability.
+- The intended outcome is an empirically demonstrated high-sensitivity non-dominated method, not a presupposition that PACT2.0 already lies on the frontier.
+
 ## Research identity and objective — fixed by project owner, 2026-11-19
 
 **Highest-Amplitude Sampling (HAS) is PACT's identity, not a disposable historical artifact.** PACT2.0 must *develop HAS beyond its prototype cutoff implementation*, preserving **sensitivity-first design** for rare, high-amplitude, phase-coupled neural activity. Its purpose is to embed the insight of HAS more defensibly into established PAC and statistical estimators, not to replace it with a generic conservative rank/robustness estimator.

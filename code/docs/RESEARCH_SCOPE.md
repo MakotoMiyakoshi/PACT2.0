@@ -2,16 +2,30 @@
 
 Status: exploratory research design, 2026-11-19. No estimator has yet been validated.
 
-## Objective
+## Research identity and objective — fixed by project owner, 2026-11-19
 
-Investigate rank–amplitude approaches to phase–amplitude coupling (PAC) that:
-- avoid assuming a physiologically meaningful hard highest-amplitude cutoff;
-- retain information about both relative amplitude rank and amplitude magnitude;
-- provide interpretable rank-resolved phase-dependence profiles;
-- test robustness against outliers and realistic burst artifacts;
-- permit comparison with conventional HAS-Canolty PAC, phase-only HAS resultant length, and Tort KL MI.
+**Highest-Amplitude Sampling (HAS) is PACT's identity, not a disposable historical artifact.** PACT2.0 must *develop HAS beyond its prototype cutoff implementation*, preserving **sensitivity-first design** for rare, high-amplitude, phase-coupled neural activity. Its purpose is to embed the insight of HAS more defensibly into established PAC and statistical estimators, not to replace it with a generic conservative rank/robustness estimator.
 
-The repository is an independent *research investigation*, not a replacement for sccn/PACT. No clinical validity or statistical superiority is assumed.
+**Target:** be a statistically calibrated, **high-sensitivity, non-dominated point on a conditional PAC-method Pareto frontier**, not necessarily the most artifact-resistant estimator. Trading sensitivity for physiological-artifact resistance is legitimate and should be disclosed. Inflated nominal Type I error due to an invalid statistical null **is not** a legitimate performance tradeoff.
+
+Investigate HAS-descended rank–amplitude approaches to PAC that:
+- allocate high sensitivity to rare, large-amplitude observations without claiming that a hard percentage cutoff is a physiological boundary;
+- use all-rank / smooth-tail / multi-scale selection *only if* the behavior of original HAS is recoverable as an interpretable special or limiting case;
+- use relative rank and amplitude magnitude together where useful, without erasing real sparse bursts through overzealous clipping or median aggregation;
+- fit HAS principles into established PAC estimators (Canolty, debiased PAC, Tort/KL, conditional-distribution or MI approaches);
+- report the sensitivity–artifact-resistance tradeoff and identify **conditional non-dominated methods**, rather than optimizing a single indiscriminate robustness score;
+- compare against conventional HAS-Canolty PAC, phase-only HAS resultant length, Tort KL, dPAC, gcPAC, and conditionally the more complex GLM-MI methods.
+
+The repository is an independent *research investigation*, not a replacement for sccn/PACT. No clinical validity, Pareto dominance, or statistical superiority is assumed until established by simulations and independent validation.
+
+### Important distinctions for the Pareto objective
+
+1. **Statistical false positive:** Under an explicitly specified statistical independence null, the reported test must attain the declared false-positive rate. The entire adaptive search belongs inside the null calibration (or an independent test set). Uncalibrated Type I inflation is **not** an acceptable way to buy sensitivity.
+2. **Physiological/artifactual false positive:** A sharp transient, nonsinusoidal generator, or muscle artifact can induce statistical amplitude–phase dependence without the physiological interaction of interest. Resilience to such patterns may trade off against sensitivity to true rare bursts. This is the primary scientific robustness axis.
+3. Fix a family of true-signal scenarios and competing physiologic-null/artifact scenarios before drawing a frontier. Different scenarios can have different frontier sets; one universal two-dimensional curve is not assumed.
+4. Sensitivity-prioritized method selection is not the same as hand-selecting the method with the smallest p-value. State the sensitivity objective and calibrate the search independently.
+
+**Research success criterion:** show at least one prespecified scenario in which a HAS-descended estimator provides high power to detect genuine sparse PAC at the declared statistical alpha while occupying a non-dominated sensitivity–physiological-false-positive-resistance position against meaningful published baselines. Document conditions where it fails.
 
 ## Mathematical starting point
 

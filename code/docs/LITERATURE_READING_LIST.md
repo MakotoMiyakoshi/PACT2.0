@@ -1,7 +1,7 @@
 # PACT2.0 literature reading queue
 
 Created: 2026-11-19. Bibliography verified against publisher, PubMed, PMC, or journal records. **Full texts have not yet been read in this project.**
-No simulation, pipeline script, or GitHub Actions workflow may be developed until the first-priority reading set has been reviewed and the statistical hypotheses and null models documented.
+No simulation, pipeline script, or GitHub Actions workflow may be developed until the full reading list supplied by the user has been reviewed and the statistical hypotheses and null models documented (unless the user explicitly narrows this list).
 
 **Repository policy:** GitHub Actions option B approved; only `.github/workflows/` is an explicit root-level exception. The first processing script starts at p0010, and p0000 is reserved for raw data.
 
